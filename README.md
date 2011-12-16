@@ -64,7 +64,7 @@ Add these lines to your application.ini files:
 
 There are two ways that you can create RESTful  
 
-1. Using PHP
+#### Using PHP
 
       $route = new Zeus_Rest_Route(  
           'products/:id/ratings',  
@@ -77,13 +77,13 @@ There are two ways that you can create RESTful
       );  
     
     
-2. Using an .ini file 
+#### Using an .ini file 
  
-    routes.productRatings.type = "Zeus_Rest_Route"  
-    routes.productRatings.route = "products/:id/ratings"  
-    routes.productRatings.defaults.module = "products"  
-    routes.productRatings.defaults.controller = "ratings"  
-    routes.productRatings.defaults.action = "index"  
+      routes.productRatings.type = "Zeus_Rest_Route"  
+      routes.productRatings.route = "products/:id/ratings"  
+      routes.productRatings.defaults.module = "products"  
+      routes.productRatings.defaults.controller = "ratings"  
+      routes.productRatings.defaults.action = "index"  
     
 ### RESTful Controllers
 
