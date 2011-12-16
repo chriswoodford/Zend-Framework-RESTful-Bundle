@@ -1,0 +1,8 @@
+# eclipse files
+.settings
+.buildpath
+.project
+.cache
+
+# PHPUnit files
+tests/phpunit.xml
