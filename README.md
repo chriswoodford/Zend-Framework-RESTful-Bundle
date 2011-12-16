@@ -25,15 +25,15 @@ The great majority of Zend Framework RESTful implementation require
 you to use *Zend_Rest_Route*. By default, *Zend_Rest_Route* creates
 these routes:  
 
-    /product/ratings/  
-    /product/ratings/:id  
+      /product/ratings/  
+      /product/ratings/:id  
 
 I find this kind of route to be ambiguous in a RESTful setting. Does 
 the :id refer to the product or the rating? I would much rather see
 routes that look like this:  
 
-     /product/:id  
-     /product/:id/ratings  
+      /product/:id  
+      /product/:id/ratings  
  
 This is precisely what Zeus allows you to do.   
 
@@ -51,13 +51,14 @@ Add these lines to your application.ini files:
 
 #### Initialization
 
-    autoloaderNamespaces[] = Zeus_  
-    pluginpaths.Zeus_Application_Resource = "Zeus/Application/Resource"  
-    pluginPaths.Zeus_Controller_Plugin = "Zeus/Controller/Plugin"  
+      autoloaderNamespaces[] = Zeus_  
+      
+      pluginpaths.Zeus_Application_Resource = "Zeus/Application/Resource"  
+      pluginPaths.Zeus_Controller_Plugin = "Zeus/Controller/Plugin"  
 
 #### Configuration
 
-    resources.zeus[] =  
+      resources.zeus[] =  
 
 ### RESTful Routes
 
@@ -65,15 +66,16 @@ There are two ways that you can create RESTful
 
 1. Using PHP
 
-    $route = new Zeus_Rest_Route(  
-        'products/:id/ratings',  
-        array(  
-            'module' => 'products',  
-            'controller' => 'ratings',  
-            'action' => 'index',  
-            'id' => '',  
-        )  
-    );  
+      $route = new Zeus_Rest_Route(  
+          'products/:id/ratings',  
+          array(  
+              'module' => 'products',  
+              'controller' => 'ratings',  
+              'action' => 'index',  
+              'id' => '',  
+          )  
+      );  
+    
     
 2. Using an .ini file 
  
