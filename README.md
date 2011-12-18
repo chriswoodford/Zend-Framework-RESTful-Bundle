@@ -18,8 +18,8 @@ Allow me to give credit where credit is due:
 Why Zeus?
 ---------
 
- > There are so many different RESTful implementations, why bother 
- > creating another one?
+ > There are so many different RESTful implementations for Zend 
+ > Framework, why bother creating another one?
 
 The great majority of Zend Framework RESTful implementation require 
 you to use *Zend_Rest_Route*. By default, *Zend_Rest_Route* creates
@@ -32,8 +32,8 @@ I find this kind of route to be ambiguous in a RESTful setting. Does
 the :id refer to the product or the rating? I would much rather see
 routes that look like this:  
 
-      /product/:id  
-      /product/:id/ratings  
+      /products/:id  
+      /products/:id/ratings  
  
 This is precisely what Zeus allows you to do.   
 
