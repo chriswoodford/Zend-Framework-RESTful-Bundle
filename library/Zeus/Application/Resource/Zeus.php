@@ -12,6 +12,14 @@ class Zeus_Application_Resource_Zeus
 	public function init()
 	{
 
+	    $this->_initPlugins();
+	    $this->_initActionHelpers();
+
+	}
+
+	protected function _initPlugins()
+	{
+
 		$options = $this->getOptions();
 
 		if ($this->getBootstrap()->hasResource('frontController')) {
@@ -23,6 +31,11 @@ class Zeus_Application_Resource_Zeus
 
 		$front->registerPlugin(new Zeus_Controller_Plugin_RestfulRoutes());
 		$front->registerPlugin(new Zeus_Controller_Plugin_AcceptHandler());
+
+	}
+
+	protected function _initActionHelpers()
+	{
 
 		$params = new Zeus_Controller_Action_Helper_Params();
 		Zend_Controller_Action_HelperBroker::addHelper($params);
