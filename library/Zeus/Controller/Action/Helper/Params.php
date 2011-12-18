@@ -55,13 +55,26 @@ class Zeus_Controller_Action_Helper_Params
      * Set body params
      *
      * @param  array $params
-     * @return Scrummer_Controller_Action
+     * @return Zeus_Controller_Action
      */
     public function setBodyParams(array $params)
     {
 
         $this->_bodyParams = $params;
         return $this;
+
+    }
+
+    /**
+     * set a single body param
+     *
+     * @param string $paramName
+     * @param mixes $value
+     */
+    public function setBodyParam($paramName, $value)
+    {
+
+        $this->_bodyParams[$paramName] = $value;
 
     }
 
@@ -81,16 +94,17 @@ class Zeus_Controller_Action_Helper_Params
      * Get body parameter
      *
      * @param  string $name
+     * @param  string $default
      * @return mixed
      */
-    public function getBodyParam($name)
+    public function getBodyParam($name, $default = null)
     {
 
         if ($this->hasBodyParam($name)) {
             return $this->_bodyParams[$name];
         }
 
-        return null;
+        return $default;
 
     }
 
