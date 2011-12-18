@@ -62,7 +62,7 @@ Add these lines to your application.ini files:
 
 ### RESTful Routes
 
-There are two ways that you can create RESTful  
+There are two ways that you can create RESTful routes  
 
 #### Using PHP
 
@@ -87,8 +87,38 @@ There are two ways that you can create RESTful
     
 ### RESTful Controllers
 
-Coming soon...  
+In order to use Zeus your controllers must, at minimum, implement 
+Zeus_Rest_Controller. There are a couple of ways that you can do this
 
+If you want your entire application to be RESTful, the easiest thing
+to do is to have all of your controllers extend 
+Zeus_Rest_RestfulController
+
+      class YourController extends Zeus_Rest_RestfulController 
+      {
+      
+      }
+      
+Zeus_Rest_RestfulController will require all of your controllers to
+have the following methods: index, get, post, put, and delete.
+
+If you only want certain controllers to be RESTful and allow other
+controllers to not be RESTful, you can have your RESTful controllers
+extends Zeus_Rest_BaseController and implement Zeus_Rest_Controller
+
+      class YourRestfulController 
+          extends Zeus_Rest_BaseController 
+          implements Zeus_Rest_Controller
+      {
+      
+      }
+      
+      class YourRegularController
+          extends Zend_Controller_Action
+      {
+      
+      }
+      
 ### RESTful Views
 
 Coming soon...  

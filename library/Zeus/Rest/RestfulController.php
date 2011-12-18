@@ -9,6 +9,4 @@ abstract class Zeus_Rest_RestfulController
     extends Zeus_Rest_BaseController implements Zeus_Rest_Controller
 {
 
-
-
 }
