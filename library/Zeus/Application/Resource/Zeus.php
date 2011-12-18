@@ -24,6 +24,12 @@ class Zeus_Application_Resource_Zeus
 		$front->registerPlugin(new Zeus_Controller_Plugin_RestfulRoutes());
 		$front->registerPlugin(new Zeus_Controller_Plugin_AcceptHandler());
 
+		$params = new Able_Controller_Action_Helper_Params();
+		Zend_Controller_Action_HelperBroker::addHelper($params);
+
+		$contexts = new Able_Controller_Action_Helper_RestContexts();
+		Zend_Controller_Action_HelperBroker::addHelper($contexts);
+
 	}
 
 }
