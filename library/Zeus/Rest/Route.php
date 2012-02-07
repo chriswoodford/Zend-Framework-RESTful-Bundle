@@ -9,6 +9,23 @@ class Zeus_Rest_Route extends Zend_Controller_Router_Route
 {
 
     /**
+     * Create a new chain
+     *
+     * @param  Zend_Controller_Router_Route_Abstract $route
+     * @param  string                                $separator
+     * @return Zend_Controller_Router_Route_Chain
+     */
+    public function chain(Zend_Controller_Router_Route_Abstract $route, $separator = '/')
+    {
+
+        $chain = new Zeus_Rest_Route_Chain();
+        $chain->chain($this)->chain($route, $separator);
+
+        return $chain;
+
+    }
+
+    /**
      * Instantiates route based on passed Zend_Config structure
      *
      * @param Zend_Config $config Configuration object
