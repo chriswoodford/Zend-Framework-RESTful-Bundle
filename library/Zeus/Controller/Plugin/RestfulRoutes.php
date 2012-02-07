@@ -25,19 +25,21 @@ class Zeus_Controller_Plugin_RestfulRoutes
 
         $currentRoute = $router->getCurrentRoute();
 
-        if (!$currentRoute instanceof Zeus_Rest_Route) {
+        if (!$currentRoute instanceof Zeus_Rest_Route
+            && !$currentRoute instanceof Zeus_Rest_Route_Chain
+        ) {
             return;
         }
 
         $method = strtolower($request->getMethod());
-        $id = $request->getParam('id');
+        $id = $request->getParam('id', null);
 
         if (strcasecmp($request->getMethod(), Zend_Http_Client::GET) === 0
-            && !$id
+            && $id === null
         ) {
             $method = 'index';
         } elseif (strcasecmp($request->getMethod(), Zend_Http_Client::POST) === 0
-            && $id
+            && $id !== null
         ) {
             $method = 'put';
         }
