@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Zeus</name>
+ <channel>pear.thetwelvelabs.com</channel>
+ <summary>Zend Framework 1.x RESTful Bundle</summary>
+ <description>The main purpose of Zeus is to help you easily create hierarchical routes to RESTful controllers</description>
+ <lead>
+  <name>Chris Woodford</name>
+  <user>chriswoodford</user>
+  <email>chris.woodford@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-06-12</date>
+ <time>11:21:30</time>
+ <version>
+  <release>1.0.0RC1</release>
+  <api>1.0.0RC1</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+-
+ </notes>
+ <contents>
+  <dir name="/">
+   <dir name="library">
+    <dir name="Zeus">
+     <dir name="Application">
+      <dir name="Resource">
+       <file name="Zeus.php" role="php" />
+      </dir>
+     </dir>
+     <dir name="Controller">
+      <dir name="Action">
+       <dir name="Helper">
+        <file name="Params.php" role="php" />
+        <file name="RestContexts.php" role="php" />
+       </dir>
+      </dir>
+      <dir name="Plugin">
+       <file name="AcceptHandler.php" role="php" />
+       <file name="RestfulRoutes.php" role="php" />
+      </dir>
+     </dir>
+     <dir name="Rest">
+      <dir name="Route">
+       <file name="Chain.php" role="php" />
+      </dir>
+      <file name="BaseController.php" role="php" />
+      <file name="Controller.php" role="php" />
+      <file name="RestfulController.php" role="php" />
+      <file name="Route.php" role="php" />
+     </dir>
+    </dir>
+   </dir>
+   <file name="README.md" role="doc"/>
+   <file name="LICENSE" role="doc"/>
+   <file name="VERSION" role="doc">
+    <tasks:replace from="@version@" to="version" type="package-info" />
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.6.0</min>
+    <recommended>1.6.1</recommended>
+   </pearinstaller>
+   <package>
+    <name>ZendFramework</name>
+    <channel>zend.googlecode.com/svn</channel>
+    <min>1.11.11</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install as="Zeus/Application/Resource/Zeus.php" name="library/Zeus/Application/Resource/Zeus.php" />
+   <install as="Zeus/Controller/Action/Helper/Params.php" name="library/Zeus/Controller/Action/Helper/Params.php" />
+   <install as="Zeus/Controller/Action/Helper/RestContexts.php" name="library/Zeus/Controller/Action/Helper/RestContexts.php" />
+   <install as="Zeus/Controller/Plugin/AcceptHandler.php" name="library/Zeus/Controller/Plugin/AcceptHandler.php" />
+   <install as="Zeus/Controller/Plugin/RestfulRoutes.php" name="library/Zeus/Controller/Plugin/RestfulRoutes.php" />
+   <install as="Zeus/Rest/Route/Chain.php" name="library/Zeus/Rest/Route/Chain.php" />
+   <install as="Zeus/Rest/BaseController.php" name="library/Zeus/Rest/BaseController.php" />
+   <install as="Zeus/Rest/Controller.php" name="library/Zeus/Rest/Controller.php" />
+   <install as="Zeus/Rest/RestfulController.php" name="library/Zeus/Rest/RestfulController.php" />
+   <install as="Zeus/Rest/Route.php" name="library/Zeus/Rest/Route.php" />
+   <install as="LICENSE" name="LICENSE" />
+   <install as="README" name="README.md" />
+   <install as="VERSION" name="VERSION" />
+  </filelist>
+ </phprelease>
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.0RC1</release>
+    <api>1.0.0RC1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2012-06-12</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+-
+   </notes>
+  </release>
+ </changelog>
+</package>
