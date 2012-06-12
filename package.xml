@@ -76,9 +76,10 @@
     <recommended>1.6.1</recommended>
    </pearinstaller>
    <package>
-    <name>ZendFramework</name>
+    <name>zend</name>
     <channel>zend.googlecode.com/svn</channel>
-    <min>1.11.11</min>
+    <min>1.11.4</min>
+    <max>1.11.11</max>
    </package>
   </required>
  </dependencies>

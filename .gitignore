@@ -6,3 +6,6 @@
 
 # PHPUnit files
 tests/phpunit.xml
+
+# Packages
+Zeus-*.tgz
