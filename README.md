@@ -53,7 +53,7 @@ Add these lines to your application.ini files:
 
       autoloaderNamespaces[] = Zeus_  
       
-      pluginpaths.Zeus_Application_Resource = "Zeus/Application/Resource"  
+      pluginPaths.Zeus_Application_Resource = "Zeus/Application/Resource"  
       pluginPaths.Zeus_Controller_Plugin = "Zeus/Controller/Plugin"  
 
 #### Configuration
