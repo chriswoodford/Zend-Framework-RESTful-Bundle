@@ -4,6 +4,10 @@
 .project
 .cache
 
+# Composer Files
+vendor/
+composer.lock
+
 # PHPUnit files
 tests/phpunit.xml
 

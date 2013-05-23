@@ -12,7 +12,12 @@
         }
     ],
     "require": {
-        "php": ">=5.2.4",
-        "zendframework/zendframework1": "1.11.x"
+        "php": ">=5.2.4"
+    },
+    "require-dev": {
+        "zendframework/zendframework1": "1.12.x"
+    },
+    "suggest": {
+        "zendframework/zendframework1": "This only works with Zend Framework 1.x"
     }
 }
