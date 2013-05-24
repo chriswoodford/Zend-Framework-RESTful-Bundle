@@ -27,6 +27,7 @@ class Zeus_Controller_Plugin_RestfulRoutes
 
         if (!$currentRoute instanceof Zeus_Rest_Route
             && !$currentRoute instanceof Zeus_Rest_Route_Chain
+            && !$currentRoute instanceof Zeus_Rest_Route_Hostname
         ) {
             return;
         }
