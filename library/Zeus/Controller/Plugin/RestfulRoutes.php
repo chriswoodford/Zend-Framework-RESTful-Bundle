@@ -40,7 +40,7 @@ class Zeus_Controller_Plugin_RestfulRoutes
         ) {
             $method = 'index';
         } elseif (strcasecmp($request->getMethod(), Zend_Http_Client::POST) === 0
-            && $id !== null
+            && $id !== null && $id !== ''
         ) {
             $method = 'put';
         }
