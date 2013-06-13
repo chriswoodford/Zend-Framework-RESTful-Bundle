@@ -28,7 +28,9 @@ class Zeus_Controller_Action_Helper_Params
         // zend framework request cannot find the Content-Type header
         // this is a work-around so that the Content-Type header will
         // be found if apache_request_headers() are not available
-        $_SERVER['HTTP_CONTENT_TYPE'] = $_SERVER['CONTENT_TYPE'];
+        if (array_key_exists('CONTENT_TYPE', $_SERVER)) {
+            $_SERVER['HTTP_CONTENT_TYPE'] = $_SERVER['CONTENT_TYPE'];
+        }
 
         $request = $this->getRequest();
         $contentType = $request->getHeader('Content-Type');
