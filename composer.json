@@ -19,5 +19,10 @@
     },
     "suggest": {
         "zendframework/zendframework1": "This only works with Zend Framework 1.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Zeus": "library/"
+        }
     }
 }
